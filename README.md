@@ -1,30 +1,61 @@
-# React + TypeScript + Vite
+# Penina Doula Services - Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Penina Doula Services** website! This project is a beautiful and functional landing page designed for a professional doula, providing essential information about services, benefits, and ways to contact.
 
-Currently, two official plugins are available:
+## 🌟 Features
+- **Responsive Design**: Fully optimized for desktop and mobile users.
+- **Elegant UI**: Soft pink theme with a warm, professional aesthetic.
+- **Multi-section Layout**:
+  - Hero section with a background image and a call-to-action.
+  - About section with professional details.
+  - Service highlights with icons.
+  - Testimonials section.
+  - Contact button for easy communication.
+- **Smooth Animations & Transitions** for an engaging experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Frontend**: Next.js (React-based framework)
+- **Styling**: Tailwind CSS for modern, clean styling
+- **Icons & SVGs**: Lucide icons for sharp, scalable graphics
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## 📂 Project Structure
+```
+penina-doula/
+├── public/       # Static assets (logo, images, etc.)
+├── components/   # Reusable components
+├── data/         # Data for the site (JSON)
+├── lib/          # Utility functions
+├── stories/      # Reusable UI components
+└── README.md     # Project documentation
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🚀 Getting Started
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/penina-doula.git
+   ```
+2. Navigate into the project:
+   ```sh
+   cd penina-doula
+   ```
+3. Install dependencies:
+   ```sh
+   npm install  # or yarn install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev  # or yarn dev
+   ```
+
+## 📌 Customization
+- To update **content** (text, images, links), modify relevant React components inside the `/components` directory.
+- To adjust **styles**, edit Tailwind classes in the respective components or `globals.css`.
+- To change **icons**, use `lucide-react` or replace SVG paths as needed.
+
+## 📞 Contact & Deployment
+- The "Contact" button is linked to WhatsApp or email as per the client's preference.
+- The website can be deployed easily using **Vercel** or **Netlify**.
+
+---
+🔹 *Built with love & care for supporting mothers on their beautiful journey!* 💖
+
