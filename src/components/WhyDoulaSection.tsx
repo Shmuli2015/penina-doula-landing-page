@@ -8,29 +8,31 @@ const benefits = [
     icon: Heart,
     title: "תמיכה רגשית רציפה",
     description:
-      "נוכחות מרגיעה ותומכת לאורך כל תהליך הלידה, מפחיתה חרדה ומעצימה את חווית הלידה",
+      "נוכחות מרגיעה ותומכת לאורך כל הלידה, מפחיתה מתח וחרדה ומעצימה את תחושת הביטחון שלך",
   },
   {
     icon: Shield,
-    title: "תוצאות לידה משופרות",
+    title: "לידה קלה וטבעית יותר",
     description:
-      "מחקרים מראים שנוכחות דולה מפחיתה את הסיכוי לניתוח קיסרי ב-50% ומקצרת את משך הלידה",
+      "מחקרים מראים שליווי דולה מפחית את הסיכון לניתוח קיסרי ב-50% ומקצר את משך הלידה",
   },
   {
     icon: Brain,
-    title: "ידע וניסיון מקצועי",
+    title: "מומחיות וידע מקצועי",
     description:
-      "מספקת מידע מבוסס ראיות ועוזרת בקבלת החלטות מושכלות במהלך הלידה",
+      "דולה מספקת לך מידע מבוסס מחקרים, מלווה אותך בקבלת החלטות ומעניקה ביטחון בכל שלב בתהליך",
   },
   {
     icon: Sparkles,
-    title: "טכניקות הקלה טבעיות",
+    title: "הקלה טבעית על הכאב",
     description:
-      "שימוש במגוון שיטות להקלה על כאבי לידה, כולל נשימות, תנועה ועיסוי",
+      "טכניקות ייחודיות כמו נשימות, תנועה ועיסוי עוזרות לך להתמודד עם הצירים בצורה טבעית ונעימה יותר",
   },
 ];
 
 const WhyDoulaSection = () => {
+  const title = "למה חשוב ללדת עם דולה?";
+  const subtitle = "לידה רגועה, מעצימה וטבעית יותר";
   return (
     <section className="w-full py-16 px-4 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -42,11 +44,10 @@ const WhyDoulaSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-semibold text-pink-900 mb-4 font-heebo">
-            למה חשוב ללדת עם דולה?
+            {title}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto font-heebo">
-            דולה היא מלווית לידה מקצועית המספקת תמיכה פיזית, רגשית ואינפורמטיבית
-            לאורך ההריון, הלידה והתקופה שאחרי
+            {subtitle}
           </p>
         </motion.div>
 
@@ -75,6 +76,22 @@ const WhyDoulaSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="flex justify-center items-center text-pink-600 mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", bounce: 0.3 }}
+        >
+          <motion.p
+            className="text-lg font-semibold font-heebo"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            ללדת עם דולה כי מגיע לך חוויית לידה טובה, רגועה ומעצימה! 💜
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );
