@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, useScroll } from "framer-motion";
+import React, { useState } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Button } from "./ui/button";
 import { MessageCircle, Menu, X } from "lucide-react";
 import Logo from "./Logo";
@@ -9,11 +9,9 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollY } = useScroll();
 
-  useEffect(() => {
-    return scrollY.onChange((latest) => {
-      setIsScrolled(latest > 50);
-    });
-  }, [scrollY]);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 50);
+  });
 
   const handleContactClick = () => {
     const whatsappText =
@@ -46,7 +44,13 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto w-full px-6 py-3 flex justify-between items-center">
-        <Logo className="h-16 md:h-[60px] transition-transform duration-300 hover:scale-105" />
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="cursor-pointer"
+        >
+          <Logo className="h-16 md:h-[60px] transition-transform duration-300 hover:scale-105 filter drop-shadow-lg hover:drop-shadow-xl" />
+        </motion.div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">

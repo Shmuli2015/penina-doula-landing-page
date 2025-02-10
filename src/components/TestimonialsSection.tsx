@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 
 import {
   type Testimonial,
@@ -41,32 +40,22 @@ const TestimonialsSection = ({
           }}
           dir="rtl"
         >
-          <CarouselContent className="-mr-4 ml-4">
+          <CarouselContent className="-mr-4 ml-4 flex">
             {testimonials.map((testimonial) => (
               <CarouselItem
                 key={testimonial.id}
-                className="pr-6 md:basis-1/2 lg:basis-1/3"
+                className="pr-6 md:basis-1/2 lg:basis-1/3 flex"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
+                  className="flex-1 flex"
                 >
-                  <Card className="h-full bg-white hover:shadow-lg transition-all duration-300 border-2 border-pink-100">
-                    <CardContent className="p-6 flex flex-col items-center text-center">
-                      <Avatar className="w-20 h-20 mb-4">
-                        <AvatarImage
-                          src={testimonial.avatarUrl}
-                          alt={testimonial.name}
-                        />
-                        <AvatarFallback>
-                          {testimonial.name
-                            .split(" ")
-                            .map((n) => n[0])
-                            .join("")}
-                        </AvatarFallback>
-                      </Avatar>
-                      <blockquote className="mb-4 text-gray-700">
+                  <Card className="flex-1 bg-white hover:shadow-lg transition-all duration-300 border-2 border-pink-100 flex flex-col">
+                    <CardContent className="p-6 flex flex-col items-center text-center flex-1">
+                      <div className="mb-1 text-pink-600 text-3xl">❝</div>
+                      <blockquote className="mb-4 text-gray-700 flex-1">
                         "{testimonial.quote}"
                       </blockquote>
                       <cite className="font-medium text-pink-700 not-italic">
