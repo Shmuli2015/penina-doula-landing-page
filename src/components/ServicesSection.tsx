@@ -57,7 +57,7 @@ const ServicesSection = () => {
                 )
               }
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
+              <MessageCircle className="ml-2 h-5 w-5" />
               צרי קשר בוואטסאפ
             </Button>
           </Card>

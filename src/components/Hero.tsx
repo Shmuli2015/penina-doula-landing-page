@@ -65,7 +65,7 @@ const Hero = ({
               className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-6 text-lg font-heebo"
             >
               {ctaText}
-              <ArrowRight className="mr-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5 rotate-180" />
             </Button>
           </motion.div>
         </div>
