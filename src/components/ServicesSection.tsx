@@ -28,6 +28,8 @@ const ServicesSection = () => {
     },
   };
 
+  const whatsappText = "שלום פנינה, אני מתעניינת בשירותי הדולה שלך!";
+
   return (
     <section className="w-full py-16 px-4 md:px-8 bg-pink-50">
       <motion.div
@@ -52,7 +54,7 @@ const ServicesSection = () => {
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg"
               onClick={() =>
                 window.open(
-                  "https://wa.me/972584179929?text=Hi Penina, I'm interested in your doula services!",
+                  `https://wa.me/972584179929?text=${whatsappText}`,
                   "_blank",
                 )
               }

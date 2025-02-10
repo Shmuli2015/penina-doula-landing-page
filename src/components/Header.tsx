@@ -16,8 +16,10 @@ const Header = () => {
   }, [scrollY]);
 
   const handleContactClick = () => {
+    const whatsappText =
+      "שלום פנינה, אני מתעניינת בשירותי הדולה שלך!";
     window.open(
-      "https://wa.me/972584179929?text=Hi Penina, I'm interested in your doula services!",
+      `https://wa.me/972584179929?text=${whatsappText}`,
       "_blank"
     );
   };

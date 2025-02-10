@@ -9,8 +9,8 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton = ({
-  phoneNumber = "972584179929",
-  message = "Hi Penina, I'm interested in your doula services!",
+  phoneNumber = import.meta.env.VITE_PHONE_NUMBER,
+  message = "שלום פנינה, אני מתעניינת בשירותי הדולה שלך!",
 }: WhatsAppButtonProps) => {
   const handleClick = () => {
     const encodedMessage = encodeURIComponent(message);
