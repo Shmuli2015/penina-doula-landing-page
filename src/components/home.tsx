@@ -6,6 +6,7 @@ import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 import TestimonialsSection from "./TestimonialsSection";
 import WhatsAppButton from "./WhatsAppButton";
+import Footer from "./Footer";
 
 const Home = () => {
   const handleHeroCtaClick = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       </div>
       <TestimonialsSection />
       <WhatsAppButton />
+      <Footer />
     </div>
   );
 };
